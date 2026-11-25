@@ -28,16 +28,16 @@ classDiagram
 
 ## 2. Data Structure Selection
 
-** ArrayList<IngredientNode> **
+**ArrayList<IngredientNode>**
 
 I chose an ArrayList to store the ingredients inside each IngredientNode. A finished food product can contain multiple ingredients, and some of those ingredients can contain other ingredients. By using an ArrayList it makes it easier to keep track of the ingredients connected to each node and go through them when searching the tree.
 
-** HashMap<String, ingredientNode> **
+**HashMap<String, ingredientNode>**
 
 A HashMap will be used to store finished food products using their food names as keys. This is useful because the program needs to find specific food products when checking their ingredients or processing a recall. Instead of searching through every food product one at a time, a HashMap allows the program to find them in O(1) average time.
 
 
-** Tree Structure **
+**Tree Structure**
 
 I chose a tree for the food products because the ingredients within the food will not be stored as just a long list. Some ingredients can contain other ingredients, creating multiple levels and complex combinations. For example, a finished meal can contain sauce, and the sauce can contain tomatoes and garlic. A tree represents these relationships by allowing each node to have multiple children. This also makes recursion useful because the program can repeat the same search through each branch until it reaches the raw materials.
 
