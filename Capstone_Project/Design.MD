@@ -44,15 +44,24 @@ I chose a tree for the food products because the ingredients within the food wil
 
 ## 3. Big-O Expectations
 
-Register a food product: O(1) average
+**Register a food product: O(1) average**
+
 A food product can be added to the HashMap using its food name as the key.
-Find a food product: O(1) average
+
+**Find a food product: O(1) average**
+
 The HashMap can access a food product directly using its key.
-Adding an ingredient: O(1) amortized
+
+**Adding an ingredient: O(1) amortized**
+
 Adding an ingredient to an ArrayList usually takes constant time.
-Listing raw materials: O(n)
+
+**Listing raw materials: O(n)**
+
 The program may need to visit every node in the tree to find all raw materials.
-Flag a recall: O(n)
+
+**Flag a recall: O(n)**
+
 The program needs to search through all registered food product trees to find every product containing the contaminated ingredient.
 
 Here, n represents the total number of ingredient nodes being searched. The recall operation may need to check every registered food product and its ingredients.
